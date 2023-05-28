@@ -1,0 +1,55 @@
+.pageTitle {
+    position: absolute; /* Add this line */
+    top: 100px; /* Adjust the value as needed */
+  }
+ 
+  /* Media query for viewport width less than or equal to 600px */
+@media (max-width: 600px) {
+  .pageTitle {
+    top: 80px; /* Adjust the value as needed */
+  }
+}
+
+/* Media query for viewport width between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .pageTitle {
+    top: 90px; /* Adjust the value as needed */
+  }
+}
+
+/* Media query for viewport width between 901px and 1200px */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .pageTitle {
+    top: 100px; /* Adjust the value as needed */
+    transform: translateX(-10px);
+  }
+}
+
+/* Media query for viewport width between 1201px and 1600px */
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .pageTitle {
+    top: 110px; /* Adjust the value as needed */
+    transform: translateX(-20px);
+  }
+}
+
+/* Media query for viewport width between 1601px and 2000px */
+@media (min-width: 1601px) and (max-width: 2000px) {
+  .pageTitle {
+    top: 120px; /* Adjust the value as needed */
+    transform: translateX(-30px);
+  }
+}
+
+/* Media query for viewport width greater than 2000px */
+@media (min-width: 2001px) {
+  .pageTitle {
+    top: 130px; /* Adjust the value as needed */
+    transform: translateX(-25px);
+  }
+}
+
+  
+
+
+

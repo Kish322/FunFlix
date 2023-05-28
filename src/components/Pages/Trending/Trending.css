@@ -1,0 +1,4 @@
+.pageTitle {
+    position: absolute; /* Add this line */
+    top: 100px; /* Adjust the value as needed */
+}
