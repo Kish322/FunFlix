@@ -21,9 +21,6 @@ export default function SimpleBottomNavigation() {
         history.push("/series");
       else if (value === 3) 
         history.push("/search");
-
-
-
   }, [value, history]);
 
   return (

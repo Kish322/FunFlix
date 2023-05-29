@@ -1,4 +1,23 @@
-.pageTitle {
-    position: absolute; /* Add this line */
-    top: 100px; /* Adjust the value as needed */
-}
+.trending-container {
+    padding-top: 60px; /* Adjust the padding-top value to accommodate the fixed header */
+  }
+  
+  .pageTitle {
+    text-align: center;
+  }
+  
+  .trending {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 70px; /* Adjust the margin-top value to move the box down */
+    text-align: center;
+    font-family: 'Your Custom Font', sans-serif; /* Replace 'Your Custom Font' with the name of your custom font */
+    /* Additional styling properties */
+    color: #ffffff; /* Font color */
+  }
+  
+
+  
+  
+  

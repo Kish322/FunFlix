@@ -14,9 +14,4 @@
   z-index: 100; 
 }
 
-@media (max-width:900px) {
-  .header {
-      padding-top: 20px;
-      font-size: 25px;
-  }
-}
+
