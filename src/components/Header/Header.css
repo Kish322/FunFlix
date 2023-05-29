@@ -14,4 +14,44 @@
   z-index: 100; 
 }
 
+@media (min-width: 163px) and (max-width: 299px) {
+  .header {
+    padding-top: 20px;
+      font-size: 56px;
+  }
+}
+ 
+@media (min-width: 300px) and (max-width: 889px) {
+  .header {
+    padding-top: 20px;
+      font-size: 60px;
+  }
+}
 
+@media (min-width: 300px) and (max-width: 889px) {
+  .header {
+    padding-top: 20px;
+      font-size: 60px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1700px) {
+  .header {
+    padding-top: 20px;
+      font-size: 60px;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 3000px) {
+  .header {
+    padding-top: 20px;
+      font-size: 60px;
+  }
+}
+
+@media (min-width: 1900px) and (max-width: 3000px) {
+  .header {
+    padding-top: 20px;
+      font-size: 60px;
+  }
+}
