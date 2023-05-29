@@ -1,57 +1,58 @@
 .header {
-  width: 100%; 
-  position: fixed; 
-  display: flex; 
+  width: 100%;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
   justify-content: center;
   text-transform: uppercase;
-  background-color: #39445a;
-  font-family: "Montserrat", sans-serif; 
-  font-size: 4.5vw;
-  padding-bottom: 15px;
-  padding-top: 12px;
-  box-shadow: 2px 3px 9px black;
-  color: white; 
-  z-index: 100; 
+  background-color: #462047;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+  padding-bottom: 10 px;
+  box-shadow: 5px 10px 10px rgb(1, 20, 23);
+  color: white;
+  z-index: 100;
 }
 
-@media (min-width: 163px) and (max-width: 299px) {
-  .header {
-    padding-top: 20px;
-      font-size: 56px;
+.rainbow-animation {
+  animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  14.28% {
+    color: orange;
+  }
+  28.57% {
+    color: yellow;
+  }
+  42.85% {
+    color: green;
+  }
+  57.14% {
+    color: blue;
+  }
+  71.42% {
+    color: indigo;
+  }
+  85.71% {
+    color: violet;
+  }
+  100% {
+    color: red;
   }
 }
+
+@media (min-width: 163px) and (max-width: 3000px) {
+  .header {
+    padding-top: 20px;
+    font-size: 65px;
+    animation: none; /* Disable the rainbow animation for smaller screens */
+    color: white; /* Set the color to white */
+  }
+}
+
+
  
-@media (min-width: 300px) and (max-width: 889px) {
-  .header {
-    padding-top: 20px;
-      font-size: 60px;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 889px) {
-  .header {
-    padding-top: 20px;
-      font-size: 60px;
-  }
-}
-
-@media (min-width: 900px) and (max-width: 1700px) {
-  .header {
-    padding-top: 20px;
-      font-size: 60px;
-  }
-}
-
-@media (min-width: 1800px) and (max-width: 3000px) {
-  .header {
-    padding-top: 20px;
-      font-size: 60px;
-  }
-}
-
-@media (min-width: 1900px) and (max-width: 3000px) {
-  .header {
-    padding-top: 20px;
-      font-size: 60px;
-  }
-}
