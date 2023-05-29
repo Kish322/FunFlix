@@ -9,7 +9,7 @@
   .trending {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 70px; /* Adjust the margin-top value to move the box down */
     text-align: center;
     font-family: 'Your Custom Font', sans-serif; /* Replace 'Your Custom Font' with the name of your custom font */
@@ -17,7 +17,13 @@
     color: #ffffff; /* Font color */
   }
   
-
+  @media (min-width: 1000px) {
+    .trending {
+      justify-content: space-between;
+      margin-top: 70px; /* Adjust the margin-top value as needed */
+      max-width: 1400px; /* Adjust the max-width value as needed */
+    }
+  }
   
   
   
