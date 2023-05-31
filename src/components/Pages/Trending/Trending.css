@@ -1,12 +1,8 @@
 .trending-container {
-    padding-top: 60px; /* Adjust the padding-top value to accommodate the fixed header */
+    padding-top:90px; /* Adjust the padding-top value to accommodate the fixed header */
   }
-  
-  .pageTitle {
-    text-align: center;
-  }
-  
-  .trending {
+
+.trending {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -15,15 +11,34 @@
     font-family: 'Your Custom Font', sans-serif; /* Replace 'Your Custom Font' with the name of your custom font */
     /* Additional styling properties */
     color: #ffffff; /* Font color */
+}
+  
+ 
+
+  .trending-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
   }
   
-  @media (min-width: 1000px) {
-    .trending {
-      justify-content: space-between;
-      margin-top: 70px; /* Adjust the margin-top value as needed */
-      max-width: 1400px; /* Adjust the max-width value as needed */
-    }
+  .trending-heading {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #743c12;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: -60px;
   }
+  
+  
+ 
+  
+
+  
   
   
   

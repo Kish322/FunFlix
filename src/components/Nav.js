@@ -13,45 +13,46 @@ export default function SimpleBottomNavigation() {
   const history = useHistory();
 
   useEffect(() => {
-      if (value === 0) 
-        history.push("/");
-      else if (value === 1) 
-        history.push("/movies");
-      else if (value === 2) 
-        history.push("/series");
-      else if (value === 3) 
-        history.push("/search");
+    if (value === 0) 
+      history.push("/");
+    else if (value === 1) 
+      history.push("/movies");
+    else if (value === 2) 
+      history.push("/series");
+    else if (value === 3) 
+      history.push("/search");
   }, [value, history]);
 
   return (
-    <Box sx={{ position: 'fixed', bottom: 0, width: '100%', backgroundColor: 'white', height: 70, zIndex: 100, boxShadow: '25px -7px 10px rgba(0, 0, 0, 0.5)'}}>
+    <Box sx={{ position: 'fixed', bottom: 5, height: 50, width: '100%', zIndex: 100, boxShadow: '5px -8px 10px rgba(0, 0, 0, 0.5)' }}>
       <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(_event, newValue) => {
+        showLabels
+        value={value}
+        onChange={(_event, newValue) => {
           setValue(newValue);
         }}
+        sx={{ backgroundColor: "#462047" }} 
       > 
-      <BottomNavigationAction
-          style={{color: "black"}}
+        <BottomNavigationAction
+          style={{color: "white"}}
           label="Trending"
           icon={<WhatshotIcon sx={{ fontSize: 32 }} />}
           sx={{ fontSize: 16 }}
         />
         <BottomNavigationAction
-          style={{color: "black"}}
+          style={{color: "white"}}
           label="Movies"
           icon={<MovieIcon sx={{ fontSize: 32 }} />}
           sx={{ fontSize: 16 }}
         />
         <BottomNavigationAction
-          style={{color: "black"}}
+          style={{color: "white"}}
           label="TV Series"
           icon={<TvIcon sx={{ fontSize: 32 }} />}
           sx={{ fontSize: 16 }}
         />
         <BottomNavigationAction
-          style={{color: "black"}}
+          style={{color: "white"}}
           label="Search"
           icon={<SearchIcon sx={{ fontSize: 32 }} />}
           sx={{ fontSize: 16 }}
