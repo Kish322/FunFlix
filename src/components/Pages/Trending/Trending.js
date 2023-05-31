@@ -13,7 +13,15 @@ const Trending = () => {
       const { data } = await axios.get(
         `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
       );
-      setContent(data.results);
+
+      const currentDate = new Date().toISOString().split('T')[0]; // Get the current date in "YYYY-MM-DD" format
+
+      // Filter out upcoming movies from the results
+      const filteredResults = data.results.filter(
+        (result) => result.media_type !== 'movie' || (result.release_date && result.release_date <= currentDate)
+      );
+
+      setContent(filteredResults);
     };
 
     fetchTrending();
@@ -44,4 +52,3 @@ const Trending = () => {
 };
 
 export default Trending;
-
