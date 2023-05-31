@@ -1,13 +1,14 @@
 .header {
   width: 100%;
   position: fixed;
+  top: 0; /* Ensure the header stays at the top */
   display: flex;
   justify-content: center;
   text-transform: uppercase;
   background-color: #462047;
   font-family: "Montserrat", sans-serif;
   font-size: 2vw;
-  padding-bottom: 10 px;
+  padding-bottom: 10px;
   box-shadow: 5px 10px 10px rgb(1, 20, 23);
   color: white;
   z-index: 100;
