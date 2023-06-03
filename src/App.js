@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/Nav";
-import Trending from './components/Pages/Trending/Trending';
-import GenreChart from './components/Pages/GenreChart/GenreChart';
-
-import Search from './components/Pages/Search/Search';
+import Trending from './Pages/Trending/Trending';
+import GenreChart from './Pages/GenreChart/GenreChart';
+import Search from './Pages/Search/Search';
 
 function App() {
   return (
