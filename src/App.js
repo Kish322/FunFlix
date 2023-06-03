@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/Nav";
 import Trending from './components/Pages/Trending/Trending';
 import GenreChart from './components/Pages/GenreChart/GenreChart';
-import Series from './components/Pages/Series/Series';
+
 import Search from './components/Pages/Search/Search';
 
 function App() {
@@ -18,7 +18,6 @@ function App() {
           <Switch>
             <Route exact path="/" component={Trending} />
             <Route path="/genrecharts" component={GenreChart} />
-            <Route path="/series" component={Series} />
             <Route path="/search" component={Search} />
           </Switch>
         </Container>

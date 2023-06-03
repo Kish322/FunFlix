@@ -5,7 +5,6 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import SearchIcon from '@mui/icons-material/Search'; 
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
-import TvIcon from '@mui/icons-material/Tv'; 
 import { useHistory } from 'react-router-dom';
 
 export default function SimpleBottomNavigation() {
@@ -18,8 +17,6 @@ export default function SimpleBottomNavigation() {
     else if (value === 1) 
       history.push("/genrecharts");
     else if (value === 2) 
-      history.push("/series");
-    else if (value === 3) 
       history.push("/search");
   }, [value, history]);
 
@@ -43,12 +40,6 @@ export default function SimpleBottomNavigation() {
           style={{color: "white"}}
           label="Genres"
           icon={<BarChartOutlinedIcon sx={{ fontSize: 32 }} />}
-          sx={{ fontSize: 16 }}
-        />
-        <BottomNavigationAction
-          style={{color: "white"}}
-          label="TV Series"
-          icon={<TvIcon sx={{ fontSize: 32 }} />}
           sx={{ fontSize: 16 }}
         />
         <BottomNavigationAction
