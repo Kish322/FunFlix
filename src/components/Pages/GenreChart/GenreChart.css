@@ -1,0 +1,150 @@
+.container {
+  padding-top: 120px; /* Adjust the padding-top value to accommodate the fixed header */
+  padding-bottom: 600px;
+}
+
+.select-container {
+  margin-bottom: 10px;
+}
+
+.select-container label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.select-container select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: purple; /* Update the background color to purple */
+  color: white; /* Update the font color to white */
+  transition: border-color 0.3s ease;
+}
+
+.select-container select:hover {
+  border-color: #666;
+}
+
+.select-container select:focus {
+  outline: none;
+  border-color: #888;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.select-wrapper {
+  padding: 10px;
+  border: 2px solid blue; /* Add a blue border */
+  border-radius: 5px;
+}
+
+.select-wrapper label {
+  font-weight: bold;
+  color: white;
+}
+
+.year-box,
+.type-box,
+.country-box,
+.language-box,
+.rating-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Reduce the margin to bring the select boxes closer */
+}
+
+.year-box select,
+.type-box select,
+.country-box select,
+.language-box select {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: purple;
+  color: white;
+  transition: border-color 0.3s ease;
+  display: inline-flex;
+}
+
+.type-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px; /* Increase the margin-bottom value to move the select box down */
+}
+
+.genre-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  color: #743c12;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px; /* Reduce the negative margin to create some space below the title */
+}
+
+.chart-container {
+  width: 100%;
+  height: 400px; /* Adjust the height as desired */
+  margin-top: 20px; /* Add margin to separate the chart from other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.genre-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  color: #743c12;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: -60px;
+}
+
+
+.chart-container {
+  position: relative;
+}
+
+.genre-info {
+  position: absolute;
+  top: 410px; /* Adjust the initial position above the chart */
+  left: calc(50% - 150px); /* Adjust the value based on the width of the chart */
+  width: 300px; /* Adjust the width of the sticky note */
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #86771e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  font-family: Arial, sans-serif;
+  transition: top 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+.genre-info.adjust-down {
+  top: 50px; /* Adjust the value based on your preference */
+}
+
+.genre-info-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.genre-info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.genre-info-list li {
+  margin-bottom: 5px;
+}
