@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import MovieIcon from '@mui/icons-material/Movie';  
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';  
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import SearchIcon from '@mui/icons-material/Search'; 
+import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import TvIcon from '@mui/icons-material/Tv'; 
 import { useHistory } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ export default function SimpleBottomNavigation() {
     if (value === 0) 
       history.push("/");
     else if (value === 1) 
-      history.push("/movies");
+      history.push("/genrecharts");
     else if (value === 2) 
       history.push("/series");
     else if (value === 3) 
@@ -41,8 +41,8 @@ export default function SimpleBottomNavigation() {
         />
         <BottomNavigationAction
           style={{color: "white"}}
-          label="Movies"
-          icon={<MovieIcon sx={{ fontSize: 32 }} />}
+          label="Genres"
+          icon={<BarChartOutlinedIcon sx={{ fontSize: 32 }} />}
           sx={{ fontSize: 16 }}
         />
         <BottomNavigationAction

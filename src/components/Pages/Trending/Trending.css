@@ -12,18 +12,16 @@
     /* Additional styling properties */
     color: #ffffff; /* Font color */
 }
-  
- 
 
-  .trending-container {
+.trending-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
    
-  }
+}
   
-  .trending-heading {
+.trending-heading {
     text-align: center;
     font-size: 48px;
     font-weight: bold;
@@ -32,7 +30,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: -60px;
-  }
+}
   
   
  

@@ -4,7 +4,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/Nav";
 import Trending from './components/Pages/Trending/Trending';
-import Movies from './components/Pages/Movies/Movies';
+import GenreChart from './components/Pages/GenreChart/GenreChart';
 import Series from './components/Pages/Series/Series';
 import Search from './components/Pages/Search/Search';
 
@@ -17,7 +17,7 @@ function App() {
         <Container maxWidth="lg">
           <Switch>
             <Route exact path="/" component={Trending} />
-            <Route path="/movies" component={Movies} />
+            <Route path="/genrecharts" component={GenreChart} />
             <Route path="/series" component={Series} />
             <Route path="/search" component={Search} />
           </Switch>
