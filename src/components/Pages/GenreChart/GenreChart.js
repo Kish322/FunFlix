@@ -54,7 +54,7 @@ const GenreChart = () => {
           genreCounts[genre.name] = 0;
         });
 
-        let apiUrl = `https://api.themoviedb.org/3/discover/${selectedType}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${currentPage}`;
+        let apiUrl = `https://api.themoviedb.org/3/discover/${selectedType}?api_key=${process.env.REACT_APP_API_KEY}&sort_by=popularity.desc&include_adult=false&include_video=false&page=${currentPage}`;
 
         if (selectedYear) {
           apiUrl += `&primary_release_year=${selectedYear}`;
@@ -173,9 +173,6 @@ const GenreChart = () => {
     if (elements.length > 0) {
       const clickedIndex = elements[0].index;
       const clickedGenre = genreData.labels[clickedIndex];
-      
-      
-      
       if (selectedGenre === clickedGenre) {
         setSelectedGenre('');
         setMovieNames([]);
