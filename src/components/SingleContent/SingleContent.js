@@ -1,9 +1,7 @@
-import { Badge } from "@material-ui/core";
-import { img_300, unavailable } from "../config/config";
+import { img_300, unavailable } from "../image/image";
 import './SingleContent.css';
 
 const SingleContent = ({
-  id,
   poster,
   title,
   date,
@@ -13,11 +11,9 @@ const SingleContent = ({
   original_language
 }) => {
   const mediaTypeText = media_type === 'tv' ? "TV Series" : "Movie";
-  const ratingText = `Rating:\n${vote_average}`;
   
   return (
     <div className="media">
-      <Badge className="badge" badgeContent={ratingText} color={vote_average > 6 ? 'primary' : 'secondary' } />
       <img className="poster" src={poster ? `${img_300}/${poster}` : unavailable} alt={title} />
       <div className="contentDetails">
         <b className="title">{title}</b>
@@ -29,7 +25,16 @@ const SingleContent = ({
           ) : (
             <span className="originCountry">Origin Country: N/A</span>
           )}
-          <span className="originalLanguage">Original Language: {original_language}</span>
+          {original_language ? (
+            <span className="originLanguage">Origin Language: {original_language}</span>
+          ) : (
+            <span className="originLanguage">Origin Language: N/A</span>
+          )}
+          {vote_average ? (
+            <span className="rating">Rating: {vote_average}/10 ⭐</span>
+          ) : (
+            <span className="rating">Rating: N/A</span>
+          )}
         </div>
       </div>
     </div>
