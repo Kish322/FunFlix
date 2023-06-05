@@ -1,0 +1,50 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paper {
+  background-color: #293619;
+  border-radius: 4px;
+  padding: 2rem;
+  width: 400px;
+  text-align: center;
+  color: #ffffff;
+  margin-left: -1rem;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin: 1rem 0;
+}
+
+.trailerButton {
+  margin-top: 1rem;
+}
+
+.youtubeIcon {
+  margin-right: 0.5rem;
+}
+
+.subtitle1 {
+  font-size: 1.2rem;
+}
+
+.subtitle2 {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.genres {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #ffffff;
+}

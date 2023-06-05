@@ -3,17 +3,17 @@ import { Pagination } from "@material-ui/lab";
 
 const darkTheme = createTheme({
   palette: {
-    type: "light"
-  }
+    type: "light",
+  },
 });
 
 const useStyles = makeStyles((theme) => ({
   boldPagination: {
     "& .MuiPaginationItem-page": {
       fontWeight: "bold",
-      fontSize: "1.2rem"
-    }
-  }
+      fontSize: "1.2rem",
+    },
+  },
 }));
 
 const CustomPagination = ({ setPage, numOfPages = 10 }) => {
@@ -21,7 +21,7 @@ const CustomPagination = ({ setPage, numOfPages = 10 }) => {
 
   const handlePageChange = (_event, page) => {
     setPage(page);
-    window.scroll({ top: 0, behavior: 'smooth' });
+    window.scroll({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -30,7 +30,7 @@ const CustomPagination = ({ setPage, numOfPages = 10 }) => {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        marginTop: 20,
+        marginTop: 40, // Adjust the marginTop value to move the pagination down
         position: "relative",
       }}
     >
@@ -46,3 +46,4 @@ const CustomPagination = ({ setPage, numOfPages = 10 }) => {
 };
 
 export default CustomPagination;
+

@@ -1,27 +1,27 @@
 .trending-container {
-    padding-top:90px; /* Adjust the padding-top value to accommodate the fixed header */
+    padding-top: 90px; /* Adjust the padding-top value to accommodate the fixed header */
   }
-
-.trending {
+  
+  .trending {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 70px; /* Adjust the margin-top value to move the box down */
+    justify-content: space-around;
+    margin-top: 15px; /* Adjust the margin-top value to move the box down */
+    margin-bottom: -20px; /* Adjust the margin-bottom value to reduce the gap */
     text-align: center;
     font-family: 'Your Custom Font', sans-serif; /* Replace 'Your Custom Font' with the name of your custom font */
     /* Additional styling properties */
     color: #ffffff; /* Font color */
-}
-
-.trending-container {
+  }
+  
+  .trending-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
-}
+  }
   
-.trending-heading {
+  .trending-heading {
     text-align: center;
     font-size: 48px;
     font-weight: bold;
@@ -29,14 +29,5 @@
     color: #743c12;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: -60px;
-}
-  
-  
- 
-  
-
-  
-  
-  
-  
+    margin-bottom: -10px; /* Adjust the margin-bottom value to reduce the gap */
+  }  
