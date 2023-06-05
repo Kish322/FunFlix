@@ -1,5 +1,5 @@
 .container {
-  padding-top: 120px; /* Adjust the padding-top value to accommodate the fixed header */
+  padding-top: 120px;
   padding-bottom: 500px;
 }
 
@@ -17,8 +17,8 @@
   border-radius: 4px;
   border: 1px solid #ccc;
   font-size: 16px;
-  background-color: purple; /* Update the background color to purple */
-  color: white; /* Update the font color to white */
+  background-color: purple; 
+  color: white; 
   transition: border-color 0.3s ease;
 }
 
@@ -34,7 +34,7 @@
 
 .select-wrapper {
   padding: 10px;
-  border: 2px solid blue; /* Add a blue border */
+  border: 2px solid blue;
   border-radius: 5px;
 }
 
@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px; /* Reduce the margin to bring the select boxes closer */
+  margin-bottom: 20px; 
 }
 
 .year-box select,
@@ -72,7 +72,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px; /* Increase the margin-bottom value to move the select box down */
+  margin-top: 80px; 
 }
 
 .genre-title {
@@ -83,13 +83,13 @@
   color: #743c12;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 20px; /* Reduce the negative margin to create some space below the title */
+  margin-bottom: 20px; 
 }
 
 .chart-container {
   width: 100%;
-  height: 400px; /* Adjust the height as desired */
-  margin-top: 20px; /* Add margin to separate the chart from other elements */
+  height: 400px; 
+  margin-top: 20px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,9 +114,9 @@
 
 .genre-info {
   position: absolute;
-  top: 410px; /* Adjust the initial position above the chart */
-  left: calc(50% - 150px); /* Adjust the value based on the width of the chart */
-  width: 300px; /* Adjust the width of the sticky note */
+  top: 410px; 
+  left: calc(50% - 150px); 
+  width: 300px; 
   padding: 10px;
   text-align: center;
   display: flex;
@@ -127,11 +127,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   font-family: Arial, sans-serif;
-  transition: top 0.3s ease-in-out; /* Add transition for smooth animation */
+  transition: top 0.3s ease-in-out; 
 }
 
 .genre-info.adjust-down {
-  top: 50px; /* Adjust the value based on your preference */
+  top: 50px; 
 }
 
 .genre-info-title {

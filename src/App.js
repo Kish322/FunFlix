@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/Nav";
-import Trending from './Pages/Trending/Trending';
+import Popular from './Pages/Popular/Popular';
 import GenreChart from './Pages/GenreChart/GenreChart';
-
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
         <div className="background-images"></div>
         <Container maxWidth="lg">
           <Switch>
-            <Route exact path="/" component={Trending} />
+            <Route exact path="/" component={Popular} />
             <Route path="/genrecharts" component={GenreChart} />
           </Switch>
         </Container>

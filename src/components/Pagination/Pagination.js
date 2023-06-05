@@ -1,13 +1,8 @@
-import { ThemeProvider, createTheme, makeStyles } from "@material-ui/core";
+import React from "react";
 import { Pagination } from "@material-ui/lab";
+import { makeStyles } from "@material-ui/core/styles";
 
-const darkTheme = createTheme({
-  palette: {
-    type: "light",
-  },
-});
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   boldPagination: {
     "& .MuiPaginationItem-page": {
       fontWeight: "bold",
@@ -16,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CustomPagination = ({ setPage, numOfPages = 10 }) => {
+const PaginationBar = ({ setPage, numOfPages = 15 }) => {
   const classes = useStyles();
 
   const handlePageChange = (_event, page) => {
@@ -34,16 +29,13 @@ const CustomPagination = ({ setPage, numOfPages = 10 }) => {
         position: "relative",
       }}
     >
-      <ThemeProvider theme={darkTheme}>
-        <Pagination
-          classes={{ ul: classes.boldPagination }}
-          count={numOfPages}
-          onChange={handlePageChange}
-        />
-      </ThemeProvider>
+      <Pagination
+        classes={{ ul: classes.boldPagination }}
+        count={numOfPages}
+        onChange={handlePageChange}
+      />
     </div>
   );
 };
 
-export default CustomPagination;
-
+export default PaginationBar;
