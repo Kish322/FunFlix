@@ -1,7 +1,7 @@
 import { img_300, unavailable } from "../image/image";
-import './SingleContent.css';
+import './DisplayContent.css';
 
-const SingleContent = ({
+const DisplayContent = ({
   poster,
   title,
   date,
@@ -41,8 +41,4 @@ const SingleContent = ({
   );
 };
 
-export default SingleContent
-
-
-
-
+export default DisplayContent;

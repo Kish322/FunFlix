@@ -21,14 +21,16 @@ const GenreChart = () => {
   const chartRef = useRef(null);
 
   const years = Array.from({ length: new Date().getFullYear() - 1990 + 1 }, (_, index) => 1990 + index);
-  const countries = ['US', 'GB', 'CA', 'AU']; 
-  const languages = ['en', 'es', 'fr', 'de']; 
+  const countries = ['US', 'GB', 'CA', 'AU', 'DE', 'JP']; 
+  const languages = ['en', 'es', 'fr', 'de', 'it', 'ja', 'ko', 'ar', 'zh']; 
   const ratings = Array.from({ length: 10 }, (_, index) => index + 1); // Rating values from 1 to 10
   const countryNames = {
     US: 'United States',
     GB: 'United Kingdom',
     CA: 'Canada',
     AU: 'Australia',
+    DE: 'Germany', 
+    JP: 'Japan'
   };
   const languageNames = {
     en: 'English',
@@ -36,7 +38,10 @@ const GenreChart = () => {
     fr: 'French',
     de: 'German',
     it: 'Italian',
-    pt: 'Portuguese',
+    ja: 'Japanese',
+    zh: 'Chinese', 
+    ko: 'Korean', 
+    ar: 'Arabic'
   };
 
   useEffect(() => {
