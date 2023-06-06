@@ -27,3 +27,25 @@
   letter-spacing: 2px;
   margin-bottom: -10px;
 }  
+
+.attribution-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+  background-color: #293619;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.attribution-box p {
+  margin-right: 8px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.attribution-box img {
+  width: 60px;
+  height: 40px;
+}

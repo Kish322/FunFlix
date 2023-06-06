@@ -8,13 +8,16 @@ import PopupModal from '../../components/PopupModal/PopupModal';
 const Popular = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
+  const tmdbLogoUrl =
+    'https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg';
+  const tmdbApiUrl = 'https://www.themoviedb.org/';
 
   useEffect(() => {
     const fetchContent = async () => {
       const popularMovies = await axios.get(
         `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
       );
-     
+
       const topRatedTVShows = await axios.get(
         `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
       );
@@ -34,17 +37,12 @@ const Popular = () => {
       setContent(combinedContent);
     };
 
-
     fetchContent();
   }, [page]);
 
   const renderMovies = () => {
     return content.map((item) => (
-      <PopupModal
-        key={item.id}
-        media_type={item.media_type}
-        id={item.id}
-      >
+      <PopupModal key={item.id} media_type={item.media_type} id={item.id}>
         <DisplayContent
           id={item.id}
           poster={item.poster_path}
@@ -59,11 +57,17 @@ const Popular = () => {
     ));
   };
 
+  const handleBoxClick = () => {
+    window.location.href = tmdbApiUrl;
+  };
+
   return (
     <div className="trending-container">
       <h1 className="trending-heading">Popular Movies and Top Rated TV Shows</h1>
-      <div className="trending">
-        {renderMovies()}
+      <div className="trending">{renderMovies()}</div>
+      <div className="attribution-box" onClick={handleBoxClick}>
+        <p>Content sourced from TMDB</p>
+        <img src={tmdbLogoUrl} alt="TMDB Logo" />
       </div>
       <Pagination setPage={setPage} />
     </div>
@@ -71,3 +75,7 @@ const Popular = () => {
 };
 
 export default Popular;
+
+
+
+
