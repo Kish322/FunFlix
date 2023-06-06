@@ -44,6 +44,10 @@ const GenreChart = () => {
     ar: 'Arabic'
   };
 
+  const tmdbLogoUrl =
+    'https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg';
+  const tmdbApiUrl = 'https://www.themoviedb.org/';
+
   useEffect(() => {
     const fetchGenreData = async () => {
       try {
@@ -157,6 +161,10 @@ const GenreChart = () => {
     setCurrentPage(1);
   };
 
+  const handleBoxClick = () => {
+    window.location.href = tmdbApiUrl;
+  };
+
   const handleScroll = () => {
     if (
       chartRef.current &&
@@ -197,7 +205,6 @@ const GenreChart = () => {
         </Typography>
         <select id="type-select" value={selectedType} onChange={handleTypeChange}>
           <option value="movie">Movies</option>
-          
         </select>
       </div>
       <div className="select-container year-box">
@@ -251,6 +258,10 @@ const GenreChart = () => {
             </option>
           ))}
         </select>
+        <div className="attribution-boxs" onClick={handleBoxClick}>
+          <p>Content sourced from TMDB</p>
+          <img src={tmdbLogoUrl} alt="TMDB Logo" />
+        </div>
       </div>
       {genreData ? (
         <div className="chart-container">

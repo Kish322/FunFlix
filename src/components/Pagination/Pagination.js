@@ -25,7 +25,8 @@ const PaginationBar = ({ setPage, numOfPages = 15 }) => {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        marginTop: 40, // Adjust the marginTop value to move the pagination down
+        marginTop: 16,
+        paddingBottom: 6, 
         position: "relative",
       }}
     >
@@ -33,6 +34,8 @@ const PaginationBar = ({ setPage, numOfPages = 15 }) => {
         classes={{ ul: classes.boldPagination }}
         count={numOfPages}
         onChange={handlePageChange}
+        variant="outlined" 
+        color="primary"
       />
     </div>
   );
