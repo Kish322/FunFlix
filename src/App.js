@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from "./components/Header/Header";
 import SimpleBottomNavigation from "./components/Nav";
-import Popular from './Pages/Popular/Popular';
-import GenreChart from './Pages/GenreChart/GenreChart';
+import Popular from './pages/Popular/Popular';
+import GenreChart from './pages/GenreChart/GenreChart';
 
 function App() {
   return (
