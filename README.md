@@ -10,6 +10,7 @@ The following technologies were used to create this application:
 * React 
 * MUI (Material-UI) 
 * React Router 
+* Chart.js
 
 # API Documentation 
 
