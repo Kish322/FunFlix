@@ -49,3 +49,19 @@
   font-style: italic;
   color: #ffffff;
 }
+
+@media (max-width: 536px) {
+  .paper {
+    width: 190px;
+    font-size: 11px;
+    margin-left: 0rem;
+  }
+
+  .paper .subtitle1 {
+    font-size: 11px;
+  }
+
+  .paper .description {
+    font-size: 11px;
+  }
+}

@@ -55,6 +55,7 @@
 
 .year-box select,
 .type-box select,
+.rating-box select,
 .country-box select,
 .language-box select {
   padding: 10px;
@@ -74,25 +75,46 @@
   margin-top: 80px; 
 }
 
-.genre-title {
-  text-align: center;
-  font-size: 48px;
-  font-weight: bold;
-  font-family: 'Arial', sans-serif;
-  color: #743c12;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px; 
-}
-
 .chart-container {
   width: 100%;
-  height: 400px; 
-  margin-top: 20px; 
+  height: 400px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+@media (max-width: 449px) {
+  .chart-container {
+    height: 300px;
+    margin-top: 10px;
+    position: fixed;
+  }
+}
+
+@media (max-width: 500px) {
+  .chart-container {
+    height: 250px;
+    margin-top: -40px;
+    position: fixed;
+  }
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    height: 250px;
+    margin-top: 10px;
+    position: fixed;
+  }
+}
+
+@media (max-width: 800px) {
+  .chart-container {
+    height: 250px;
+    margin-top: -10px;
+    position: fixed;
+  }
 }
 
 .genre-title {
@@ -104,6 +126,12 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: -60px;
+}
+
+@media (max-width: 380px) {
+  .genre-title {
+    font-size: 30px !important;
+  }
 }
 
 .chart-container {

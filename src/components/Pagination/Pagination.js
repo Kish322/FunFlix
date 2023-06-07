@@ -36,6 +36,7 @@ const PaginationBar = ({ setPage, numOfPages = 15 }) => {
         onChange={handlePageChange}
         variant="outlined" 
         color="primary"
+        size="small"
       />
     </div>
   );
