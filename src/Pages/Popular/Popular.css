@@ -48,7 +48,14 @@
   color: #743c12;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: -10px;
+  margin-bottom: -9px;
+  margin-top: 30px;
+}
+
+@media (max-width: 380px) {
+  .trending-heading {
+    font-size: 30px !important;
+  }
 }
 
 .attribution-box {

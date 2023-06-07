@@ -136,6 +136,7 @@
 
 .chart-container {
   position: relative;
+  margin-left: -4px;
 }
 
 .genre-info {
@@ -155,6 +156,25 @@
   font-family: Arial, sans-serif;
   transition: top 0.3s ease-in-out; 
   font-size: 20;
+}
+
+@media (max-width: 480px) {
+  .genre-info {
+    margin-top: -200px; 
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: small;
+  }
+}
+
+@media (max-width: 800px) {
+  .genre-info {
+    margin-top: -165px; 
+    align-items: center;
+    justify-content: center;
+    margin-left: -10px;
+  }
 }
 
 .genre-info.adjust-down {

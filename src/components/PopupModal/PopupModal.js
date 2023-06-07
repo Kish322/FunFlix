@@ -33,7 +33,10 @@ const PopupModal = ({ children, media_type, id }) => {
       `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
     );
 
-    setVideo(data.results[0]?.key);
+    const trailerVideo = data.results.find((video) => video.type === "Trailer");
+    if (trailerVideo) {
+      setVideo(trailerVideo.key);
+    }
   };
 
   useEffect(() => {
@@ -70,7 +73,7 @@ const PopupModal = ({ children, media_type, id }) => {
                       Current Season: {content.seasons[content.seasons.length - 1].season_number}
                     </Typography>
                     <Typography variant="subtitle2" style={{ marginBottom: "1rem" }}>
-                      Total Number of Episodes: {content.seasons[content.seasons.length - 1].episode_count}
+                      Number of Episodes: {content.seasons[content.seasons.length - 1].episode_count}
                     </Typography>
                   </>
                 ) : (
