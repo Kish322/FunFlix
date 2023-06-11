@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 15px;
-  margin-bottom: -20px;
+  margin-top: 25px;
+ 
   text-align: center;
   font-family: 'Your Custom Font', sans-serif;
   color: #ffffff;
@@ -29,6 +29,15 @@
   }
   .trending > * {
     width: 80%; /* Adjust the width to allocate space for two movies per row */  
+  }
+}
+
+@media (max-width: 1200px) {
+  .trending {
+    justify-content: center;
+  }
+  .trending > * {
+    width: 40%; /* Adjust the width to allocate space for two movies per row */  
   }
 }
 

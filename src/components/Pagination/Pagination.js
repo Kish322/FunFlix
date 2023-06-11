@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const PaginationBar = ({ setPage, numOfPages = 15 }) => {
+const PaginationBar = ({ setPage, numOfPages = 25 }) => {
   const classes = useStyles();
 
   const handlePageChange = (_event, page) => {
@@ -25,7 +25,7 @@ const PaginationBar = ({ setPage, numOfPages = 15 }) => {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        marginTop: 16,
+        marginTop: 50,
         paddingBottom: 6, 
         position: "relative",
       }}
