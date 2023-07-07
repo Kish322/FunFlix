@@ -9,9 +9,17 @@ const useStyles = makeStyles(() => ({
       fontSize: "1.2rem",
     },
   },
+  designedBy: {
+    position: "absolute",
+    bottom: -40,
+    left: "50%",
+    transform: "translateX(-50%)",
+    fontSize: "1rem",
+    color: "black",
+  },
 }));
 
-const PaginationBar = ({ setPage, numOfPages = 25 }) => {
+const PaginationBar = ({ setPage, numOfPages = 15 }) => {
   const classes = useStyles();
 
   const handlePageChange = (_event, page) => {
@@ -26,7 +34,7 @@ const PaginationBar = ({ setPage, numOfPages = 25 }) => {
         display: "flex",
         justifyContent: "center",
         marginTop: 50,
-        paddingBottom: 6, 
+        paddingBottom: 6,
         position: "relative",
       }}
     >
@@ -34,10 +42,11 @@ const PaginationBar = ({ setPage, numOfPages = 25 }) => {
         classes={{ ul: classes.boldPagination }}
         count={numOfPages}
         onChange={handlePageChange}
-        variant="outlined" 
+        variant="outlined"
         color="primary"
         size="small"
       />
+      <div className={classes.designedBy}>Designed by Kishor Yogeswaran</div>
     </div>
   );
 };

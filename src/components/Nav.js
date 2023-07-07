@@ -5,6 +5,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 export default function Navigation() {
   const [anchorEl, setAnchorEl] = useState(null);
   const history = useHistory();
@@ -24,12 +28,7 @@ export default function Navigation() {
     scrollToTop();
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   useEffect(() => {
-    // Scroll to top when the user navigates back to the same page
     if (location.pathname === history.location.pathname) {
       scrollToTop();
     }
@@ -55,15 +54,17 @@ export default function Navigation() {
           },
         }}
       >
-        <MenuIcon sx={{
-          fontSize: 60,
-          '@media (max-width: 300px)': {
-            fontSize: 10,
-          },
-          '@media (max-width: 600px)': {
-            fontSize: 40,
-          }
-        }} />
+        <MenuIcon
+          sx={{
+            fontSize: 60,
+            '@media (max-width: 300px)': {
+              fontSize: 10,
+            },
+            '@media (max-width: 600px)': {
+              fontSize: 40,
+            },
+          }}
+        />
       </IconButton>
       <Menu
         anchorEl={anchorEl}

@@ -222,7 +222,7 @@ const GenreChart = () => {
       </div>
       <div className="select-container country-box">
         <Typography variant="subtitle1" component="label" htmlFor="country-select">
-          Select Country:
+          Select Released Country:
         </Typography>
         <select id="country-select" value={selectedCountry} onChange={handleCountryChange}>
           <option value="">All</option>
