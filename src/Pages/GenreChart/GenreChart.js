@@ -342,6 +342,7 @@ const GenreChart = () => {
       ) : (
         <p></p>
       )}
+      {isLoading && <p></p>}
     </div>
   );
 };
