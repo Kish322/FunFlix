@@ -21,16 +21,16 @@ const GenreChart = () => {
   const chartRef = useRef(null);
 
   const years = Array.from({ length: new Date().getFullYear() - 1990 + 1 }, (_, index) => 1990 + index);
-  const countries = ['US', 'GB', 'CA', 'AU', 'DE', 'JP']; 
-  const languages = ['en', 'es', 'fr', 'de', 'it', 'ja', 'ko', 'ar', 'zh']; 
-  const ratings = Array.from({ length: 10 }, (_, index) => index + 1); // Rating values from 1 to 10
+  const countries = ['US', 'GB', 'CA', 'AU', 'DE', 'JP'];
+  const languages = ['en', 'es', 'fr', 'de', 'it', 'ja', 'ko', 'ar', 'zh'];
+  const ratings = Array.from({ length: 10 }, (_, index) => index + 1);
   const countryNames = {
     US: 'United States',
     GB: 'United Kingdom',
     CA: 'Canada',
     AU: 'Australia',
-    DE: 'Germany', 
-    JP: 'Japan'
+    DE: 'Germany',
+    JP: 'Japan',
   };
   const languageNames = {
     en: 'English',
@@ -39,9 +39,9 @@ const GenreChart = () => {
     de: 'German',
     it: 'Italian',
     ja: 'Japanese',
-    zh: 'Chinese', 
-    ko: 'Korean', 
-    ar: 'Arabic'
+    zh: 'Chinese',
+    ko: 'Korean',
+    ar: 'Arabic',
   };
 
   const tmdbLogoUrl =
@@ -59,7 +59,7 @@ const GenreChart = () => {
         const genres = response.data.genres;
 
         const genreCounts = {};
-        genres.forEach(genre => {
+        genres.forEach((genre) => {
           genreCounts[genre.name] = 0;
         });
 
@@ -78,16 +78,16 @@ const GenreChart = () => {
           apiUrl += `&vote_average.gte=${selectedRating}&vote_average.lte=${selectedRating}`;
         }
 
-        const popularMoviesResponse = await axios.get(apiUrl);
-        const popularMovies = popularMoviesResponse.data.results;
+        const popularItemsResponse = await axios.get(apiUrl);
+        const popularItems = popularItemsResponse.data.results;
 
-        popularMovies.forEach(movie => {
-          movie.genre_ids.forEach(genreId => {
-            const genre = genres.find(g => g.id === genreId);
+        popularItems.forEach((item) => {
+          item.genre_ids.forEach((genreId) => {
+            const genre = genres.find((g) => g.id === genreId);
             if (genre) {
               genreCounts[genre.name]++;
               if (selectedGenre === genre.name) {
-                setMovieNames(prevNames => [...prevNames, movie.title]);
+                setMovieNames((prevNames) => [...prevNames, item.title || item.name]);
               }
             }
           });
@@ -96,7 +96,6 @@ const GenreChart = () => {
         const genreLabels = Object.keys(genreCounts);
         const genreCountValues = Object.values(genreCounts);
 
-        // Define an array of background colors for the bars
         const backgroundColors = ['orange', 'red', 'blue', 'green'];
 
         if (currentPage === 1) {
@@ -106,14 +105,14 @@ const GenreChart = () => {
               {
                 label: 'Genre Count',
                 data: genreCountValues,
-                backgroundColor: backgroundColors, 
+                backgroundColor: backgroundColors,
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1,
               },
             ],
           });
         } else {
-          setGenreData(prevData => ({
+          setGenreData((prevData) => ({
             ...prevData,
             datasets: [
               {
@@ -134,29 +133,29 @@ const GenreChart = () => {
     fetchGenreData();
   }, [selectedType, selectedYear, selectedCountry, selectedLanguage, selectedRating, currentPage, selectedGenre]);
 
-  const handleTypeChange = event => {
+  const handleTypeChange = (event) => {
     setSelectedType(event.target.value);
     setCurrentPage(1);
     setSelectedGenre('');
     setMovieNames([]);
   };
 
-  const handleYearChange = event => {
+  const handleYearChange = (event) => {
     setSelectedYear(event.target.value);
     setCurrentPage(1);
   };
 
-  const handleCountryChange = event => {
+  const handleCountryChange = (event) => {
     setSelectedCountry(event.target.value);
     setCurrentPage(1);
   };
 
-  const handleLanguageChange = event => {
+  const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
     setCurrentPage(1);
   };
 
-  const handleRatingChange = event => {
+  const handleRatingChange = (event) => {
     setSelectedRating(event.target.value);
     setCurrentPage(1);
   };
@@ -170,7 +169,7 @@ const GenreChart = () => {
       chartRef.current &&
       window.innerHeight + window.pageYOffset >= chartRef.current.offsetTop + chartRef.current.offsetHeight
     ) {
-      setCurrentPage(prevPage => prevPage + 1);
+      setCurrentPage((prevPage) => prevPage + 1);
     }
   };
 
@@ -205,6 +204,7 @@ const GenreChart = () => {
         </Typography>
         <select id="type-select" value={selectedType} onChange={handleTypeChange}>
           <option value="movie">Movies</option>
+          <option value="tv">TV Series</option>
         </select>
       </div>
       <div className="select-container year-box">
@@ -213,7 +213,7 @@ const GenreChart = () => {
         </Typography>
         <select id="year-select" value={selectedYear} onChange={handleYearChange}>
           <option value="">All</option>
-          {years.map(year => (
+          {years.map((year) => (
             <option key={year} value={year}>
               {year}
             </option>
@@ -226,7 +226,7 @@ const GenreChart = () => {
         </Typography>
         <select id="country-select" value={selectedCountry} onChange={handleCountryChange}>
           <option value="">All</option>
-          {countries.map(country => (
+          {countries.map((country) => (
             <option key={country} value={country}>
               {countryNames[country]}
             </option>
@@ -239,7 +239,7 @@ const GenreChart = () => {
         </Typography>
         <select id="language-select" value={selectedLanguage} onChange={handleLanguageChange}>
           <option value="">All</option>
-          {languages.map(language => (
+          {languages.map((language) => (
             <option key={language} value={language}>
               {languageNames[language]}
             </option>
@@ -252,7 +252,7 @@ const GenreChart = () => {
         </Typography>
         <select id="rating-select" value={selectedRating} onChange={handleRatingChange}>
           <option value="">All</option>
-          {ratings.map(rating => (
+          {ratings.map((rating) => (
             <option key={rating} value={rating}>
               {rating}
             </option>
@@ -265,75 +265,75 @@ const GenreChart = () => {
       </div>
       {genreData ? (
         <div className="chart-container">
-           <Bar
-      data={genreData}
-      options={{
-        responsive: true,
-        plugins: {
-          legend: {
-            display: false,
-          },
-        },
-        scales: {
-          x: {
-            grid: {
-              display: false,
-            },
-            ticks: {
-              color: 'black',
-              font: {
-                size: 15,
+          <Bar
+            data={genreData}
+            options={{
+              responsive: true,
+              plugins: {
+                legend: {
+                  display: false,
+                },
               },
-            },
-            title: {
-              display: true,
-              text: 'Genre',
-              color: 'black',
-              font: {
-                size: 18,
+              scales: {
+                x: {
+                  grid: {
+                    display: false,
+                  },
+                  ticks: {
+                    color: 'black',
+                    font: {
+                      size: 15,
+                    },
+                  },
+                  title: {
+                    display: true,
+                    text: 'Genre',
+                    color: 'black',
+                    font: {
+                      size: 18,
+                    },
+                    padding: {
+                      bottom: 10,
+                    },
+                  },
+                },
+                y: {
+                  beginAtZero: true,
+                  grid: {
+                    borderDash: [2],
+                    color: '#ddd',
+                  },
+                  ticks: {
+                    color: 'black',
+                    font: {
+                      size: 15,
+                    },
+                  },
+                  title: {
+                    display: true,
+                    text: 'Count',
+                    color: 'black',
+                    font: {
+                      size: 18,
+                    },
+                    padding: {
+                      top: 10,
+                    },
+                  },
+                },
               },
-              padding: {
-                bottom: 10,
-              },
-            },
-          },
-          y: {
-            beginAtZero: true,
-            grid: {
-              borderDash: [2],
-              color: '#ddd',
-            },
-            ticks: {
-              color: 'black',
-              font: {
-                size: 15,
-              },
-            },
-            title: {
-              display: true,
-              text: 'Count', 
-              color: 'black',
-              font: {
-                size: 18,
-              },
-              padding: {
-                top: 10,
-              },
-            },
-          },
-        },
-        onClick: handleBarClick,
-      }}
-      ref={chartRef}
-    />
-      {selectedGenre && movieNames.length > 0 && (
-        <div className="genre-info">
-          <Typography variant="h4" className="genre-info-title">
-              {selectedGenre}:
-          </Typography>
-             <ul className="genre-info-list">
-               {movieNames.map(movieName => (
-                 <li key={movieName}>{movieName}</li>
+              onClick: handleBarClick,
+            }}
+            ref={chartRef}
+          />
+          {selectedGenre && movieNames.length > 0 && (
+            <div className="genre-info">
+              <Typography variant="h4" className="genre-info-title">
+                {selectedGenre}:
+              </Typography>
+              <ul className="genre-info-list">
+                {movieNames.map((movieName) => (
+                  <li key={movieName}>{movieName}</li>
                 ))}
               </ul>
             </div>
@@ -342,7 +342,6 @@ const GenreChart = () => {
       ) : (
         <p></p>
       )}
-      {isLoading}
     </div>
   );
 };
