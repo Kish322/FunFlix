@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     left: "50%",
     transform: "translateX(-50%)",
     fontSize: "1rem",
-    color: "black",
+    color: "white",
   },
 }));
 
